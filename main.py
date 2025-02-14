@@ -23,6 +23,7 @@ The required environment variables are:
 - Create a .env file in the root directory of the project.
 - OPENROUTER_API_KEY: The API key for Openrouter.ai. You can get this from the Openrouter.ai website.
 - TELEGRAM_TOKEN: The Telegram bot token for the assistant. You can get this from the BotFather on Telegram.
+- NGROK_AUTHTOKEN: The authtoken for ngrok. You can get this from the ngrok website.
 - Intall requirements.txt
 
 
@@ -79,7 +80,7 @@ ast = MacawAssistant(
     llm = ChatOpenAIOpenRouter,
     settings=MacawSettings(core_model="openai/gpt-4o"),
     state={
-        "assistant_name": os.environ.get("ASSISTANT_NAME", "Celai"),
+        "assistant_name": os.environ.get("ASSISTANT_NAME", "Lola"),
         # current date and time
         "date": current_date_and_time,
         "location": "San Francisco, CA"
